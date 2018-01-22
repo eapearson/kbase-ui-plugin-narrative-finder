@@ -1,0 +1,82 @@
+.component-reske-assembly-browse.-row .-field.-resultNumber {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.component-reske-assembly-browse.-row .-title {
+    font-weight: bold;
+}
+
+.component-reske-assembly-browse.-row .-owner {}
+
+.component-reske-assembly-browse.-row .-created-at {
+    font-style: italic;
+}
+
+.component-reske-assembly-browse.-row .-updated-at {
+    font-style: italic;
+}
+
+.component-reske-assembly-browse.-row .-taxonomy {
+    /* text-indent: -1em;
+    margin-left: 1em; */
+    /* overflow: auto;
+    white-space: nowrap; */
+}
+
+.component-reske-assembly-browse.-row .-feature-count {
+    font-family: monospace;
+}
+
+
+/* right hand features column */
+
+.component-reske-assembly-browse.-row .-features {
+    visibility: hidden;
+}
+
+.component-reske-assembly-browse.-row:hover .-features {
+    visibility: visible;
+}
+
+
+/* toolbar */
+
+.component-reske-assembly-browse.-row .-toolbar {
+    /*color: #DDD;*/
+    color: transparent;
+}
+
+.component-reske-assembly-browse.-row:hover .-toolbar {
+    color: #000;
+}
+
+.component-reske-assembly-browse.-row .-toolbar .-button {
+    cursor: pointer;
+    padding: 3px;
+    border: 1px transparent solid;
+    border-radius: 4px;
+}
+
+.component-reske-assembly-browse.-row:hover .-toolbar .-button:hover {
+    /*background-color: #CCC;*/
+    border: 1px gray solid;
+}
+
+.component-reske-assembly-browse.-row .-toolbar .-button .-icon {
+    margin: 0 8px 0 4px;
+}
+
+.fa.-deg45 {
+    transform: rotate(45deg);
+}
+
+.component-reske-assembly-browse.-row .-detail-toggle {
+    padding: 4px;
+}
+
+.component-reske-assembly-browse.-row .-detail-toggle:hover {
+    background-color: rgba(220, 220, 220, 0.5);
+    ;
+}

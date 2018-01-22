@@ -1,0 +1,57 @@
+## ui config file for the RESKE search interface
+---
+package:
+    author: Erik Pearson
+    name: narrative-finder
+    description: A narrative browser and search tool
+    date: January 19, 2018
+source:
+    ## sources are relative to build/plugins/PACKAGE/source/javascript
+    ## NB: need to quote file names, otherwise
+    modules:
+    styles:
+        -
+            file: styles.css
+install:
+    widgets:
+        -
+            module: narrative/main
+            id: narrative-finder_panel
+            type: factory
+    ko-components:
+        # -
+        #     name: reske-search/narrative/browse
+        #     module: components/types/narrative/browse
+        #     css: true
+        # -
+        #     name: reske-search/narrative/header
+        #     module: components/types/narrative/header
+        #     css: true
+        # -
+        #     name: reske-search/data/type/narrative/view/detail
+        #     module: components/types/narrative/views/detail
+        #     css: true
+        # -
+        #     name: reske-search/data/type/narrative/view/header
+        #     module: components/types/narrative/views/header
+        #     css: true
+        # -
+        #     name: reske-search/data/type/narrative/view/list
+        #     module: components/types/narrative/views/list
+        #     css: true
+        # -
+        #     name: reske-search/data/type/narrative/view/nutshell
+        #     module: components/types/narrative/views/nutshell
+        #     css: true
+    routes:
+        -
+            path: ['narrative-finder']
+            widget: narrative-finder_panel
+            authorization: true
+    menu:
+        -
+            name: narrative-finder
+            definition:
+                path: narrative-finder
+                label: Narratives
+                icon: files-o
