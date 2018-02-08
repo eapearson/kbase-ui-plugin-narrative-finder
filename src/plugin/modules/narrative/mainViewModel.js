@@ -299,7 +299,7 @@ define([
             
                     */
         var filter = {
-            object_type: null,
+            object_types: null,
             match_filter: {
                 full_text_in_all: null,
                 lookupInKeys: {}
@@ -522,7 +522,7 @@ define([
             searchResults.removeAll();
 
             var param = {
-                object_type: 'narrative',
+                object_types: ['narrative'],
                 match_filter: {},
                 pagination: {
                     start: pageStart() || 0,
@@ -543,7 +543,7 @@ define([
 
 
             var newFilter = {
-                object_type: 'narrative',
+                object_types: ['narrative'],
                 match_filter: {
                     full_text_in_all: null,
                     lookupInKeys: {}
@@ -588,7 +588,7 @@ define([
             }
 
             filter = newFilter;
-            param.object_type = filter.object_type;
+            param.object_types = filter.object_types;
             param.match_filter = filter.match_filter;
 
             status('searching');
