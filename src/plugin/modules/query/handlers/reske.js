@@ -71,7 +71,7 @@ define([
         }
         var queryFuns = {
             searchTypes: searchTypes
-                // searchObjects: searchObjects
+            // searchObjects: searchObjects
         };
 
         function query(spec) {

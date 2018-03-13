@@ -140,10 +140,11 @@ define([
         var sortingRules = [];
         if (sortField !== null) {
             sortingRules = [{
-                is_timestamp: sortField.isTimestamp ? 1 : 0,
-                is_object_name: sortField.isObjectName ? 1 : 0,
-                key_name: sortField.key,
-                descending: sortDescending ? 1 : 0
+                // is_timestamp: sortField.isTimestamp ? 1 : 0,
+                // is_object_name: sortField.isObjectName ? 1 : 0,
+                is_object_property: 1,
+                property: sortField.key,
+                ascending: sortDescending ? 0 : 1
             }];
         }
 
@@ -173,6 +174,8 @@ define([
         //         lookupInKeys: {}
         //     }
         // };
+
+        console.log('sort param', param);
 
         var reske = new GenericClient({
             url: runtime.config('services.KBaseSearchEngine.url'),

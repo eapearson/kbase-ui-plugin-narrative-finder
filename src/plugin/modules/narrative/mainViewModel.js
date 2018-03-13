@@ -45,24 +45,24 @@ define([
 
     function objectToNarrative(object) {
 
-        var appCells;
-        if (!(object.data.cells instanceof Array)) {
-            appCells = [];
-        } else {
-            appCells = object.data.cells.reduce(function (accum, cell) {
-                var item = Props.make({ data: cell });
-                var appCell = item.hasItem('metadata.kbase.appCell');
-                if (!appCell) {
-                    return accum;
-                }
+        var appCells = [];
+        // if (!(object.data.cells instanceof Array)) {
+        //     appCells = [];
+        // } else {
+        //     appCells = object.data.cells.reduce(function (accum, cell) {
+        //         var item = Props.make({ data: cell });
+        //         var appCell = item.hasItem('metadata.kbase.appCell');
+        //         if (!appCell) {
+        //             return accum;
+        //         }
 
-                accum.push({
-                    id: item.getItem('metadata.kbase.appCell.app.spec.info.id'),
-                    title: item.getItem('metadata.kbase.appCell.app.spec.info.name')
-                });
-                return accum;
-            }, []);
-        }
+        //         accum.push({
+        //             id: item.getItem('metadata.kbase.appCell.app.spec.info.id'),
+        //             title: item.getItem('metadata.kbase.appCell.app.spec.info.name')
+        //         });
+        //         return accum;
+        //     }, []);
+        // }
 
         var m = /^WS:(.*)\/(.*)\/(.*)$/.exec(object.guid);
         var workspaceId = m[1];
@@ -133,7 +133,8 @@ define([
             title: object.key_props.title,
             updated: niceRelativeTimestamp(object.timestamp),
             updatedBy: object.meta.updated.by,
-            cellCount: object.data.cells ? object.data.cells.length : 0,
+            // cellCount: object.data.cells ? object.data.cells.length : 0,
+            cellCount: null,
             objectCount: object.workspaceInfo.object_count - 1,
             appCellCount: appCells.length,
             // owner: object.meta.owner,
